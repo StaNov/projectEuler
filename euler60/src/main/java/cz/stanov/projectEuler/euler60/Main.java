@@ -1,7 +1,5 @@
 package cz.stanov.projectEuler.euler60;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -14,7 +12,7 @@ public class Main {
     }
 
     public static long getResultForArgument(int i) {
-        List<Long> resultPrimes = findResultPrimes(i);
+        List<Long> resultPrimes = ResultComputer.findResultPrimes(i);
 
         return sumList(resultPrimes);
     }
@@ -27,11 +25,6 @@ public class Main {
         }
 
         return result;
-    }
-
-    private static List<Long> findResultPrimes(int i) {
-        // TODO
-        return new ArrayList<Long>(Arrays.asList(3L, 7L, 109L, 673L));
     }
 
 }
