@@ -1,6 +1,8 @@
 package cz.stanov.projectEuler.utils;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -33,6 +35,21 @@ public class Primes {
         }
 
         return true;
+    }
+
+    public static List<Long> generatePrimes(int count) {
+        List<Long> result = new ArrayList<Long>();
+        long currentTestedNumber = 2;
+
+        while (result.size() < count) {
+            if (isPrime(currentTestedNumber)) {
+                result.add(currentTestedNumber);
+            }
+
+            currentTestedNumber++;
+        }
+
+        return result;
     }
 
     /*
