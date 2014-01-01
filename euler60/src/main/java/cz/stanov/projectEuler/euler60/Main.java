@@ -3,6 +3,8 @@ package cz.stanov.projectEuler.euler60;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @author Stanislav Novak (stanislav.novak@ibacz.eu)
@@ -20,7 +22,12 @@ public class Main {
     }
 
     public static long getResultForArgument(int i) {
-        List<Long> resultPrimes = ResultComputer.findResultPrimes(i);
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("/context.xml");
+
+        ResultComputer resultComputer = (ResultComputer) applicationContext.getBean("resultComputer");
+
+        List<Long> resultPrimes = resultComputer.findResultPrimes(i);
 
         return sumList(resultPrimes);
     }
