@@ -4,11 +4,17 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import static org.mockito.Mockito.*;
 
 /**
  * @author Stanislav Novak (stanislav.novak@ibacz.eu)
@@ -18,7 +24,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ResultComputerTest {
 
     @Autowired
+    @InjectMocks
     private ResultComputer resultComputer;
+
+    @Mock
+    private PrimesChecker primesChecker;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        when(primesChecker.primesAreWanted(anyList())).thenReturn(true); // TODO
+    }
 
     @Test
     public void testGetResultForArgument_4() throws Exception {
