@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Stanislav Novak (stanislav.novak@ibacz.eu)
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/test-context.xml")
+@ContextConfiguration("/context.xml")
 public class ResultComputerTest {
 
     @Autowired

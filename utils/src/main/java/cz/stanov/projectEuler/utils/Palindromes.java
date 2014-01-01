@@ -1,12 +1,15 @@
 package cz.stanov.projectEuler.utils;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author Novák Stanislav
  */
+@Component
 public class Palindromes {
 
-    public static boolean isPalindrome(long num) {
+    public boolean isPalindrome(long num) {
 
         int digits = 0;
 

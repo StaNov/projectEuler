@@ -11,8 +11,8 @@ public class Test {
 
     public static void main(String[] args) {
 
-        PandigitalFactory factory = new PandigitalFactory(9,true);
-        List<Long> pandigitals = factory.getPandigitals();
+        PandigitalCreator creator = new PandigitalCreator(9,true);
+        List<Long> pandigitals = creator.getPandigitals();
 
         int size = pandigitals.size();
         System.out.println(size);

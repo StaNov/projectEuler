@@ -9,7 +9,7 @@ import java.util.List;
  * @author Novák Stanislav
  * @version 24.5.2010
  */
-public class PandigitalFactory {
+public class PandigitalCreator {
 
     private int n;
     private boolean includeZero;
@@ -19,26 +19,26 @@ public class PandigitalFactory {
     /**
      * Constructor.
      *
-     * @param n make n-pandigital numbers without zero
+     * @param numberLength make n-pandigital numbers without zero
      */
-    public PandigitalFactory(int n) {
-        this.n = n;
+    public PandigitalCreator(int numberLength) {
+        this.n = numberLength;
         this.includeZero = false;
-        this.length = n;
+        this.length = numberLength;
     }
 
     /**
      * Constructor.
      *
-     * @param n make n-pandigital numbers
+     * @param numberLength make n-pandigital numbers
      * @param includeZero indicates if zero should be included
      */
-    public PandigitalFactory(int n, boolean includeZero) {
+    public PandigitalCreator(int numberLength, boolean includeZero) {
         
         this.includeZero = includeZero;
-        this.n = n;
-        this.length = n;
-        if(includeZero) {
+        this.n = numberLength;
+        this.length = numberLength;
+        if (includeZero) {
             length++;
         }
     }

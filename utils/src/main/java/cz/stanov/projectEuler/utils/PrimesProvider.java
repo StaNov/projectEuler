@@ -9,19 +9,22 @@ public class PrimesProvider {
 
     private long initValue;
     private long currentPrime;
+    private Primes primes;
 
-    public PrimesProvider() {
-        initValue = DEFAULT_INIT_VALUE;
-        currentPrime = DEFAULT_INIT_VALUE;
+    public PrimesProvider(Primes primes) {
+        this.initValue = DEFAULT_INIT_VALUE;
+        this.currentPrime = DEFAULT_INIT_VALUE;
+        this.primes = primes;
     }
 
-    public PrimesProvider(long initValue) {
+    public PrimesProvider(Primes primes, long initValue) {
         this.initValue = initValue;
-        currentPrime = initValue;
+        this.currentPrime = initValue;
+        this.primes = primes;
     }
 
     public long nextPrime() {
-        while (! Primes.isPrime(currentPrime)) {
+        while (! primes.isPrime(currentPrime)) {
             currentPrime++;
         }
 

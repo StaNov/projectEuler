@@ -2,21 +2,25 @@ package cz.stanov.projectEuler.utils;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.Assert.assertEquals;
 
 /**
  * @author Stanislav Novak (stanislav.novak@ibacz.eu)
  */
-public class PrimesProviderTest {
+public class PrimesProviderTest extends AbstractTest {
+
+    @Autowired
+    private PrimesProviderFactory primesProviderFactory;
 
     private PrimesProvider primesProviderInitDefault;
     private PrimesProvider primesProviderInit100;
 
     @Before
     public void setUp() {
-        primesProviderInitDefault = new PrimesProvider();
-        primesProviderInit100 = new PrimesProvider(100);
+        primesProviderInitDefault = primesProviderFactory.getNewPrimesProvider();
+        primesProviderInit100 = primesProviderFactory.getNewPrimesProvider(100);
     }
 
 

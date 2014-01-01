@@ -2,15 +2,18 @@ package cz.stanov.projectEuler.euler60;
 
 import java.util.List;
 
+import cz.stanov.projectEuler.utils.Primes;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import static cz.stanov.projectEuler.utils.Primes.isPrime;
 
 /**
  * @author Stanislav Novak (stanislav.novak@ibacz.eu)
  */
 @Component
 public class PrimesChecker {
+
+    @Autowired
+    private Primes primes;
 
     public boolean primesAreWanted(List<Long> primes) {
 
@@ -31,6 +34,6 @@ public class PrimesChecker {
         long composedPrime1 = Long.parseLong(prime1 + "" + prime2);
         long composedPrime2 = Long.parseLong(prime2 + "" + prime1);
 
-        return isPrime(composedPrime1) && isPrime(composedPrime2);
+        return primes.isPrime(composedPrime1) && primes.isPrime(composedPrime2);
     }
 }

@@ -6,13 +6,16 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author Novák Stanislav
  */
+@Component
 public class Primes {
 
-    public static boolean isPrime(long n) {
+    public boolean isPrime(long n) {
 
         if(n <= 0) {
             throw new IllegalArgumentException("argument can't be negative");
@@ -37,7 +40,7 @@ public class Primes {
         return true;
     }
 
-    public static List<Long> generatePrimes(int count) {
+    public List<Long> generatePrimes(int count) {
         List<Long> result = new ArrayList<Long>();
         long currentTestedNumber = 2;
 
@@ -79,7 +82,7 @@ public class Primes {
         return true;
     }*/
 
-    public static SortedSet<Long> getDivs(long n) {
+    public SortedSet<Long> getDivs(long n) {
 
         SortedSet<Long> set1 = new TreeSet<Long>();
         long sqrt = (long) Math.sqrt(n);
@@ -102,7 +105,7 @@ public class Primes {
         return set1;
     }
 
-    public static long gcd(long a, long b) {
+    public long gcd(long a, long b) {
 
         if(a < 1 || b < 1) {
             return 1;
@@ -123,7 +126,7 @@ public class Primes {
         return a;
     }
 
-    public static BigInteger gcd(BigInteger a, BigInteger b) {
+    public BigInteger gcd(BigInteger a, BigInteger b) {
 
         if(a.compareTo(BigInteger.ONE) < 0 || a.compareTo(BigInteger.ONE) < 0) return BigInteger.ONE;
 
@@ -135,7 +138,7 @@ public class Primes {
         return gcd(newA, newB);
     }
 
-    private static BigInteger max(BigInteger a, BigInteger b) {
+    private BigInteger max(BigInteger a, BigInteger b) {
         if(a.compareTo(b) < 0) {
             return a;
         }
@@ -143,7 +146,7 @@ public class Primes {
         return b;
     }
 
-    private static BigInteger min(BigInteger a, BigInteger b) {
+    private BigInteger min(BigInteger a, BigInteger b) {
         if(a.compareTo(b) < 0) {
             return b;
         }

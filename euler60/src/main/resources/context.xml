@@ -10,4 +10,6 @@
     <context:annotation-config/>
     <context:component-scan base-package="cz.stanov.projectEuler.euler60" />
 
+    <import resource="utils-context.xml" />
+
 </beans>
