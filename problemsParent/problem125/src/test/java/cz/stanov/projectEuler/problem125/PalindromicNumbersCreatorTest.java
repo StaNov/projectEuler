@@ -3,7 +3,6 @@ package cz.stanov.projectEuler.problem125;
 import java.util.List;
 
 import cz.stanov.projectEuler.utils.SumMaker;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,7 +20,6 @@ public class PalindromicNumbersCreatorTest extends AbstractTest {
     private SumMaker sumMaker;
 
     @Test
-    @Ignore// TODO
     public void testFindPalindromicNumbersBelow() {
         List<Long> palindromicNumbersBelow1000 = palindromicNumbersCreator.findPalindromicNumbersBelow(1000);
 
