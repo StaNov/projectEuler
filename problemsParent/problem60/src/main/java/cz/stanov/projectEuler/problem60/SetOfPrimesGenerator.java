@@ -1,4 +1,4 @@
-package cz.stanov.projectEuler.euler60;
+package cz.stanov.projectEuler.problem60;
 
 import java.util.ArrayList;
 import java.util.Arrays;

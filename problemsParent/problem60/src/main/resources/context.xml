@@ -8,7 +8,7 @@
        xmlns:context="http://www.springframework.org/schema/context">
 
     <context:annotation-config/>
-    <context:component-scan base-package="cz.stanov.projectEuler.euler60" />
+    <context:component-scan base-package="cz.stanov.projectEuler.problem60" />
 
     <import resource="utils-context.xml" />
 
