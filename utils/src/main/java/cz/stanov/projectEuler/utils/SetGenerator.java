@@ -1,4 +1,4 @@
-package cz.stanov.projecteuler.utils;
+package cz.stanov.projectEuler.utils;
 
 /**
  * @author Stanislav Novak (stanislav.novak@ibacz.eu)
