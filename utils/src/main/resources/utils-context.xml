@@ -8,6 +8,6 @@
        xmlns:context="http://www.springframework.org/schema/context">
 
     <context:annotation-config/>
-    <context:component-scan base-package="cz.stanov.projectEulero.utils" />
+    <context:component-scan base-package="cz.stanov.projecteuler.utils" />
 
 </beans>
