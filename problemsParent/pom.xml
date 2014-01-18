@@ -18,4 +18,19 @@
         <module>problem125</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>cz.stanov.ProjectEuler</groupId>
+            <artifactId>utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cz.stanov.ProjectEuler</groupId>
+            <artifactId>utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+            <type>test-jar</type>
+        </dependency>
+    </dependencies>
+
 </project>
