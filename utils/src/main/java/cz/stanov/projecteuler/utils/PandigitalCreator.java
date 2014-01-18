@@ -3,6 +3,8 @@ package cz.stanov.projecteuler.utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 /**
  * Factory for pandigital numbers.
  *
@@ -10,6 +12,8 @@ import java.util.List;
  * @version 24.5.2010
  */
 public class PandigitalCreator {
+
+    private static final Logger LOG = Logger.getLogger(PandigitalCreator.class);
 
     private int n;
     private boolean includeZero;
@@ -80,12 +84,12 @@ public class PandigitalCreator {
                 //TODO opravit: poslední nenullový prvek: 3265919
                 Long adding = (Long)newPandigital;
                 if(adding == null) {
-                    System.out.println("Bacha: " + newPandigital);
+                    LOG.error(newPandigital);
                 }
                 list.add(adding);
                 //list.add((Long)newPandigital);
                 if(newPandigital < 0) {
-                    System.out.println("Bacha: " + newPandigital);
+                    LOG.error(newPandigital);
                 }
             }
             //System.out.println(newPandigital);

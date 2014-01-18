@@ -26,4 +26,6 @@ public class Main {
 
         return resultComputer.computeResultForArgument(i);
     }
+
+    private Main() {}
 }

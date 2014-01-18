@@ -128,9 +128,13 @@ public class Primes {
 
     public BigInteger gcd(BigInteger a, BigInteger b) {
 
-        if(a.compareTo(BigInteger.ONE) < 0 || a.compareTo(BigInteger.ONE) < 0) return BigInteger.ONE;
+        if(a.compareTo(BigInteger.ONE) < 0 || a.compareTo(BigInteger.ONE) < 0) {
+            return BigInteger.ONE;
+        }
 
-        if(a.equals(b)) return a;
+        if(a.equals(b)) {
+            return a;
+        }
 
         BigInteger newA = max(a, b).subtract(min(a, b));
         BigInteger newB = min(a, b);

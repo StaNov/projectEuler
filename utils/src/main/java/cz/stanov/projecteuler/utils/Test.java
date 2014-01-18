@@ -2,12 +2,17 @@ package cz.stanov.projecteuler.utils;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 /**
  * A test class for the help classes.
  *
  * @author Novák Stanislav
  */
+// TODO dat pryč, nahradit testem
 public class Test {
+
+    private static final Logger LOG = Logger.getLogger(Test.class);
 
     public static void main(String[] args) {
 
@@ -15,10 +20,12 @@ public class Test {
         List<Long> pandigitals = creator.getPandigitals();
 
         int size = pandigitals.size();
-        System.out.println(size);
+        LOG.info(size);
         for(int i = size - 200; i < size; i++) {
-            System.out.println(pandigitals.get(i));
+            LOG.info(pandigitals.get(i));
         }
        
     }
+
+    private Test() {}
 }

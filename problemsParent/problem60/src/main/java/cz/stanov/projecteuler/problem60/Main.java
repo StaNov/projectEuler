@@ -42,4 +42,6 @@ public class Main {
         return result;
     }
 
+    private Main() {}
+
 }
