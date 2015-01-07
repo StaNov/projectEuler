@@ -9,3 +9,4 @@ Backlog
 
 * add problem solutions from previous non-maven implementation
 * add EhCache instead of custom implementation through HashMaps
+* connect to travis-ci.org
