@@ -1,0 +1,2 @@
+problem46_primePlusSquare.Generator
+problem46_primePlusSquare.PrimeGenerator
