@@ -9,6 +9,5 @@ My Java implementation of Project Euler problems
 Backlog
 =======
 
-* add problem solutions from previous non-maven implementation
+* convert problem solutions from previous non-maven implementation to Maven
 * add EhCache instead of custom implementation through HashMaps
-* connect to travis-ci.org
