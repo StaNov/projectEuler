@@ -4,6 +4,7 @@ Project Euler
 My Java implementation of Project Euler problems
 
 <img src="https://travis-ci.org/StaNov/projectEuler.svg?branch=master">
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/c194a80e3fda4beda9fd7123157c8981)](https://www.codacy.com/app/stanovec/projectEuler)
 
 
 Backlog
